@@ -70,7 +70,7 @@ app.get("/", function(req, res) {
       }
       else
         res.render("list", {listTitle: "Today", newListItems: items});
-      console.log(items);
+      //console.log(items);
     }
   });
   //mongoose.connection.close(); 
@@ -130,8 +130,8 @@ app.post("/", function(req, res){
 //post route for delte 
 app.post("/delete",function(req,res){
   const listName = req.body.listName;
-  console.log("I am here in delete");
-  console.log(listName);
+  //console.log("I am here in delete");
+  //console.log(listName);
   const itemid = req.body.checkbox;
   if(listName === "Today"){
     Item.findByIdAndRemove(itemid,function(err){
